@@ -1,0 +1,6 @@
+﻿  Country.cpp
+  Project23.cpp
+  Создание кода...
+C:\Users\User\source\repos\Project23\Project23\Project23.cpp(7,67): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\User\source\repos\Project23\Project23\Project23.cpp(10,71): warning C4305: аргумент: усечение из "double" в "float"
+  Project23.vcxproj -> C:\Users\User\source\repos\Project23\x64\Debug\Project23.exe
