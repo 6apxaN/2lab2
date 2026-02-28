@@ -1,4 +1,5 @@
 #include "Country.h"
+setlocale(LC_ALL, "RUS");
 
 Country::Country() : name(""), capital(""), area(0.0) {}
 
