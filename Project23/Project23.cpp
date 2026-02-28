@@ -2,7 +2,7 @@
 
 int main() {
     setlocale(LC_ALL, "RUS");
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    std::srand(static_cast<unsigned int>(std::time(0)));
     std::vector<std::string> cities1 = { "Бор", "Сырный", "Алергия" };
     Country country1("Империя", "Алергия", cities1, 150.32);
 
