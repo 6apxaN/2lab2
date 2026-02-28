@@ -16,7 +16,7 @@ capital(other.capital), cities(other.cities), area(other.area) {
 
 Country::~Country() {
     cities.clear();
-    std::cout << "Деструктор вызван для " << name << std::endl;
+    std::cout << "Р”РµРєСЃС‚СѓС‚РѕСЂ РІС‹Р·РІР°РЅ РґР»СЏ " << name << std::endl;
 }
 
 std::string Country::getName() const { return name; }
@@ -44,10 +44,10 @@ void Country::setCapital(const std::string& newCapital) {
             cities.push_back(newCapital);
         }
         capital = newCapital;
-        std::cout << "Столица изменена на " << capital << std::endl;
+        std::cout << "РЎС‚РѕР»РёС†Р° РёР·РјРµРЅР°РЅР° РЅР°" << capital << std::endl;
     }
     else {
-        std::cout << "Ошибка: название столицы должно содержать только буквы и пробелы" << std::endl;
+        std::cout << "РћС€РёР±РєР°: РЅР°Р·РІР°РЅРёРµ СЃС‚РѕР»РёС†С‹ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РѕР»СЊРєРѕ Р±СѓРєРІС‹ Рё РїСЂРѕР±РµР»С‹" << std::endl;
     }
 }
 
@@ -58,7 +58,7 @@ void Country::setArea(float a) {
         area = a;
     }
     else {
-        std::cout << "Ошибка площадь не может быть отрицательной" << std::endl;
+        std::cout << "РћС€РёР±РєР° РїР»РѕС‰Р°РґСЊ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№" << std::endl;
     }
 }
 
@@ -68,28 +68,28 @@ void Country::setCities(const std::vector<std::string>& newCities) {
 
 void Country::displayInfo() const {
     std::cout << "\n==========================" << std::endl;
-    std::cout << "Название: " << name << std::endl;
-    std::cout << "Столица: " << capital << std::endl;
+    std::cout << "РќР°Р·РІР°РЅРёРµ: " << name << std::endl;
+    std::cout << "РЎС‚РѕР»РёС†Р°: " << capital << std::endl;
     if (!cities.empty()) {
-        std::cout << "Города: ";
+        std::cout << "Р“РѕСЂРѕРґР°: ";
         for (size_t i = 0; i < cities.size(); i++) {
             std::cout << cities[i];
             if (i < cities.size() - 1) std::cout << ", ";
         }
         std::cout << std::endl;
     }
-    std::cout << "Площадь: " << area << " кв. км" << std::endl;
+    std::cout << "РџР»РѕС‰Р°РґСЊ: " << area << " ГЄГў. ГЄГ¬" << std::endl;
     std::cout << "===========================\n" << std::endl;
 }
 
 void Country::addArea(float newArea) {
     if (newArea > 0) {
         area += newArea;
-        std::cout << "Территория увеличена на " << newArea
-            << " кв. км. Новая площадь: " << area << " кв. км" << std::endl;
+        std::cout << "РўРµСЂСЂРёС‚РѕСЂРёСЏ СѓРІРµР»РёС‡РµРЅР° РЅР° " << newArea
+            << " РєРІ. РєРј. РќРѕРІР°СЏ РїР»РѕС‰Р°РґСЊ: " << area << " РєРІ. РєРј" << std::endl;
     }
     else {
-        std::cout << "Ошибка площадь должна быть положительной" << std::endl;
+        std::cout << "РћС€РёР±РєР° РїР»РѕС‰Р°РґСЊ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕР№" << std::endl;
     }
 }
 
@@ -120,7 +120,7 @@ Country Country::operator+=(const Country& other)
             }
         }
         if (found) {
-            this->cities.push_back(cityFromOther + " новый");
+            this->cities.push_back(cityFromOther + " РЅРѕРІС‹Р№");
         }
         else {
             this->cities.push_back(cityFromOther);
@@ -150,7 +150,7 @@ Country Country::operator+(const Country& other) const {
             }
         }
         if (found) {
-            result.cities.push_back(cityFromOther + " новый");
+            result.cities.push_back(cityFromOther + " РЅРѕРІС‹Р№");
         }
         else {
             result.cities.push_back(cityFromOther);
@@ -165,8 +165,8 @@ Country Country::operator+(const Country& other) const {
 
 Country Country::operator*(const Country& other) const {
     Country result;
-    result.name = "путь " + this->name + "->" + other.name;
-    result.capital = "нет";
+    result.name = "ГЇГіГІГј " + this->name + "->" + other.name;
+    result.capital = "Г­ГҐГІ";
     result.area = (this->area < other.area) ? this->area : other.area;
  
     if (!this->capital.empty()) {
@@ -174,7 +174,7 @@ Country Country::operator*(const Country& other) const {
     }
     if (!other.capital.empty()) {
         if (this->capital == other.capital) {
-            result.cities.push_back(other.capital + " новый");
+            result.cities.push_back(other.capital + " РЅРѕРІС‹Р№");
         }
         else {
             result.cities.push_back(other.capital);
@@ -218,7 +218,7 @@ Country Country::operator*(const Country& other) const {
             }
         }
         if (alreadyExists) {
-            result.cities.push_back(firstCity + " новый");
+            result.cities.push_back(firstCity + " РЅРѕРІС‹Р№");
         }
         else {
             result.cities.push_back(firstCity);
@@ -254,7 +254,7 @@ Country Country::operator*(const Country& other) const {
             }
         }
         if (alreadyExists) {
-            result.cities.push_back(secondCity + " новый");
+            result.cities.push_back(secondCity + " РЅРѕРІС‹Р№");
         }
         else {
             result.cities.push_back(secondCity);
