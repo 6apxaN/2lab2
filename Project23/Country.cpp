@@ -104,7 +104,7 @@ Country Country::operator=(const Country& other) {
     return *this;
 }
 
-Country& Country::operator+=(const Country& other)
+Country Country::operator+=(const Country& other)
 {
     this->name = this->name + "-" + other.name;
     if (other.area > this->area) {

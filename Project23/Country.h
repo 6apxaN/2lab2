@@ -35,7 +35,7 @@ public:
     void addArea(float newArea);
 
     Country operator=(const Country& other);
-    Country& operator+=(const Country& other);
+    Country operator+=(const Country& other);
     Country operator+(const Country& other) const;
     Country operator*(const Country& other) const;
 };
